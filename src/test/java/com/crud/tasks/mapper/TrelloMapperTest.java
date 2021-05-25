@@ -1,4 +1,4 @@
-package com.crud.tasks.trello;
+package com.crud.tasks.mapper;
 
 import com.crud.tasks.domain.*;
 import com.crud.tasks.mapper.TrelloMapper;
@@ -17,7 +17,6 @@ public class TrelloMapperTest {
 
     @Autowired
     TrelloMapper trelloMapper;
-
 
     @Test
     void shouldMapToListDto() {
