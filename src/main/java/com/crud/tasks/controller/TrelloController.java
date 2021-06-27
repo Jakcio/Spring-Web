@@ -20,12 +20,12 @@ public class TrelloController {
     @Autowired
     private final TrelloFacade trelloFacade;
 
-    @GetMapping("getTrelloBoards")
+    @GetMapping("/boards")
     public List<TrelloBoardsDto> getTrelloBoards() {
         return trelloFacade.fetchTrelloBoards();
     }
 
-    @RequestMapping(value = ("createTrelloCard"), method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = ("/cards"), method = {RequestMethod.GET, RequestMethod.POST})
     public CreatedTrelloCardDto createTrelloCard(@RequestBody TrelloCardDto trelloCardDto) {
         return trelloFacade.createCard(trelloCardDto);
     }
